@@ -1,0 +1,16 @@
+.contact {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  :host ::ng-deep .p-inputtext,
+  :host ::ng-deep .p-inputtextarea {
+    border-radius: 6px;
+  }
+  
+  :host ::ng-deep button {
+    margin-top: 1rem;
+  }
+  

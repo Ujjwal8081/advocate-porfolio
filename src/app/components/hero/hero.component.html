@@ -1,0 +1,42 @@
+<div class="hero">
+    <div class="hero-text">
+        <h2>Adv. Satyendra Nath Mishra</h2>
+        <p>
+            Specialist in Criminal Defence, Civil Litigation, Constitutional Law.
+            Over 10 years of courtroom experience in Lucknow.
+        </p>
+        <div class="hero-buttons">
+            <button pButton type="button" label="Book Consultation" icon="pi pi-calendar"
+                (click)="showDialog()"></button>
+            <button pButton type="button" label="Download CV" icon="pi pi-download" class="p-button-outlined"
+                (click)="downloadCV()"></button>
+        </div>
+    </div>
+
+    <img src="assets/image.png" alt="Advocate photo" width="200" />
+</div>
+
+<p-dialog header="Book Appointment" [(visible)]="appointmentDialog" [modal]="true" [appendTo]="'body'" 
+    [closable]="true">
+    <form (ngSubmit)="bookAppointment()">
+        <div class="p-fluid">
+            <div class="p-field">
+                <label>Name</label>
+                <input pInputText [(ngModel)]="appointment.name" name="name" required />
+            </div>
+            <div class="p-field">
+                <label>Email</label>
+                <input pInputText type="email" [(ngModel)]="appointment.email" name="email" required />
+            </div>
+            <div class="p-field">
+                <label>Phone</label>
+                <input pInputText [(ngModel)]="appointment.phone" name="phone" required />
+            </div>
+            <div class="p-field">
+                <label>Reason</label>
+                <textarea pInputTextarea rows="3" [(ngModel)]="appointment.reason" name="reason"></textarea>
+            </div>
+        </div>
+        <button pButton type="submit" label="Book" icon="pi pi-check"></button>
+    </form>
+</p-dialog>

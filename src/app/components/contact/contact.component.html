@@ -1,0 +1,25 @@
+<section id="contact" class="p-mb-4">
+    <h2>Contact</h2>
+    <form (ngSubmit)="sendMessage()">
+      <div class="p-fluid p-formgrid p-grid">
+        <div class="p-field p-col-12 p-md-6">
+          <label>Name</label>
+          <input pInputText [(ngModel)]="contact.name" name="name" required />
+        </div>
+        <div class="p-field p-col-12 p-md-6">
+          <label>Email</label>
+          <input pInputText type="email" [(ngModel)]="contact.email" name="email" required />
+        </div>
+        <div class="p-field p-col-12 p-md-6">
+          <label>Phone</label>
+          <input pInputText [(ngModel)]="contact.phone" name="phone" />
+        </div>
+        <div class="p-field p-col-12">
+          <label>Message</label>
+          <textarea pInputTextarea rows="5" [(ngModel)]="contact.message" name="message" required></textarea>
+        </div>
+      </div>
+      <button pButton type="submit" label="Send Message" icon="pi pi-send"></button>
+    </form>
+  </section>
+  

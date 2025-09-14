@@ -1,0 +1,24 @@
+:host ::ng-deep .p-menubar {
+    background: #1e3a8a; // dark navy
+    border: none;
+    border-radius: 0;
+    justify-content: space-between !important;
+  }
+  
+  :host ::ng-deep .p-menubar-start span {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  :host ::ng-deep .p-menuitem-link {
+    color: #fff !important;
+    font-weight: 500;
+  }
+  
+  :host ::ng-deep .p-menuitem-link:hover {
+    background: #3b4cca !important; // lighter blue
+  }
+  :host ::ng-deep .p-menubar-root-list {
+    margin-left: auto !important; // moves menu items to right
+  }

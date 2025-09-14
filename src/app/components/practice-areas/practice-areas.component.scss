@@ -1,0 +1,16 @@
+.practice-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  :host ::ng-deep .p-card {
+    border-left: 4px solid #1e3a8a;
+    padding: 1rem;
+    transition: transform 0.2s ease;
+  }
+  
+  :host ::ng-deep .p-card:hover {
+    transform: translateX(5px);
+  }
+  
