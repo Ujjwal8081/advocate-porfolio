@@ -20,17 +20,18 @@
   
   .testimonial-cards {
     display: flex;
-    flex-direction: row;   // ✅ force vertical layout
-    gap: 1.5rem;              // space between cards
-    width: 100%;         // optional: keep them narrow
-    margin: 0 auto;
-    min-width: 107%;           // center align
+    flex-direction: column;
+    gap: 1.5rem; 
+    max-width: 1180px;         // center align
   }
   
   :host ::ng-deep .p-card {
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
-    border-radius: 10px;
+    border-left: 4px solid #1e3a8a;
     padding: 1rem;
+    transition: transform 0.2s ease;
   }
   
+  :host ::ng-deep .p-card:hover {
+    transform: translateX(5px);
+  }
   
