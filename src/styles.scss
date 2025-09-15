@@ -1,20 +1,70 @@
+:root {
+  --bs-gutter-x: 1.5rem;
+  --background-color: #f9f9f9;
+  --text-color: #333;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f9f9f9;
     color: #333;
+  }  
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.container {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+.container-fluid {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+/* Extra small devices (default) */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
   }
-  
-//   h2 {
-//     font-size: 1.8rem;
-//     margin-bottom: 1rem;
-//     color: #1e3a8a; // dark navy
-//   }
-  
-//   p {
-//     line-height: 1.6;
-//   }
-  
-//   section {
-//     margin: 3rem 0;
-//   }
-  
+}
+
+/* Small devices (≥768px) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* Medium devices (≥992px) */
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+  .p-menubar.p-menubar-mobile-active .p-menubar-root-list {
+        width: 200px;
+        right: -32px;
+        left: auto;
+  }
+}
+
+
+/* Large devices (≥1200px) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Extra large devices (≥1400px) */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}

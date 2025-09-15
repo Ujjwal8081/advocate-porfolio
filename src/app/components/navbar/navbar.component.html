@@ -1,6 +1,12 @@
-<p-menubar [model]="menuItems">
-    <ng-template pTemplate="start">
-      <span class="font-bold text-xl">Adv. Satyendra Nath Mishra</span>
-    </ng-template>
-  </p-menubar>
-  
+<div class="navbar-bg mb-3">
+  <div class="container">
+   <p-menubar>
+  <ng-template pTemplate="start">
+    <span class="font-bold text-xl">Adv. Satyendra Nath Mishra</span>
+  </ng-template>
+  <ng-template pTemplate="end">
+    <p-menubar [model]="menuItems"></p-menubar>
+  </ng-template>
+</p-menubar>
+</div>
+</div>

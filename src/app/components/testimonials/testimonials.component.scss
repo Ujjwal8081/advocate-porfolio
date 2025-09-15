@@ -14,13 +14,15 @@
 
   .testimonials {
     padding: 2rem;
+    max-width: 1180px;
+    margin: auto;
   }
   
   .testimonial-cards {
     display: flex;
     flex-direction: row;   // ✅ force vertical layout
     gap: 1.5rem;              // space between cards
-    max-width: 600px;         // optional: keep them narrow
+    width: 100%;         // optional: keep them narrow
     margin: 0 auto;           // center align
   }
   

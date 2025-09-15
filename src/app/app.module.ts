@@ -21,7 +21,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DialogModule } from 'primeng/dialog';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +33,7 @@ import { DialogModule } from 'primeng/dialog';
     ContactComponent,
     FooterComponent
   ],
+
   imports: [
     BrowserModule,
     FormsModule,
@@ -43,7 +44,9 @@ import { DialogModule } from 'primeng/dialog';
     InputTextareaModule,
     DividerModule,
     HttpClientModule,  
-    DialogModule 
+    DialogModule, 
+    BrowserAnimationsModule ,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

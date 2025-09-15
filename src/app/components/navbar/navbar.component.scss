@@ -1,24 +1,21 @@
-:host ::ng-deep .p-menubar {
-    background: #1e3a8a; // dark navy
+app-navbar{
+.navbar-bg{
+  background-color: #FFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  .p-menubar{
+    background-color: #FFF;
     border: none;
-    border-radius: 0;
-    justify-content: space-between !important;
   }
-  
-  :host ::ng-deep .p-menubar-start span {
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: bold;
+}
+
+
+@media (max-width: 960px) {
+  .p-menubar.p-menubar-mobile-active .p-menubar-root-list {
+        width: 200px;
+        right: -32px;
+        left: auto;
   }
-  
-  :host ::ng-deep .p-menuitem-link {
-    color: #fff !important;
-    font-weight: 500;
-  }
-  
-  :host ::ng-deep .p-menuitem-link:hover {
-    background: #3b4cca !important; // lighter blue
-  }
-  :host ::ng-deep .p-menubar-root-list {
-    margin-left: auto !important; // moves menu items to right
-  }
+}
+
+}
+

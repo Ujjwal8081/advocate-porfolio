@@ -1,3 +1,4 @@
+<div class="container-fluid">
 <div class="hero">
     <div class="hero-text">
         <h2>Adv. Satyendra Nath Mishra</h2>
@@ -15,9 +16,9 @@
 
     <img src="assets/image.png" alt="Advocate photo" width="200" />
 </div>
+</div>
 
-<p-dialog header="Book Appointment" [(visible)]="appointmentDialog" [modal]="true" [appendTo]="'body'" 
-    [closable]="true">
+<p-dialog header="Book Appointment" [(visible)]="appointmentDialog" [modal]="true">
     <form (ngSubmit)="bookAppointment()">
         <div class="p-fluid">
             <div class="p-field">
@@ -40,3 +41,4 @@
         <button pButton type="submit" label="Book" icon="pi pi-check"></button>
     </form>
 </p-dialog>
+
