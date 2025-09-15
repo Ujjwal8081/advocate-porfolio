@@ -9,9 +9,19 @@ import { MenuItem } from 'primeng/api';
 })
 export class NavbarComponent {
   menuItems: MenuItem[] = [
-    { label: 'About', url: '#about' },
-    { label: 'Practice Areas', url: '#practice' },
-    { label: 'Testimonials', url: '#testimonials' },
-    { label: 'Contact', url: '#contact' }
+    { label: 'About', command: () => this.scrollTo('about') },
+    { label: 'Practice Areas', command: () => this.scrollTo('practice') },
+    { label: 'Testimonials', command: () => this.scrollTo('testimonials') },
+    { label: 'Contact', command: () => this.scrollTo('contact') }
   ];
+  
+  scrollTo(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+  goToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // 👈 Smooth scroll to top
+  }
 }

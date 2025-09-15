@@ -2,6 +2,8 @@ app-navbar{
 .navbar-bg{
   background-color: #FFF;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;  
   .p-menubar{
     background-color: #FFF;
     border: none;
@@ -15,6 +17,9 @@ app-navbar{
         right: -32px;
         left: auto;
   }
+}
+.cursor-pointer {
+  cursor: pointer;
 }
 
 }

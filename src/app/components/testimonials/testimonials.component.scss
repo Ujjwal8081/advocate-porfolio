@@ -23,7 +23,8 @@
     flex-direction: row;   // ✅ force vertical layout
     gap: 1.5rem;              // space between cards
     width: 100%;         // optional: keep them narrow
-    margin: 0 auto;           // center align
+    margin: 0 auto;
+    min-width: 107%;           // center align
   }
   
   :host ::ng-deep .p-card {
