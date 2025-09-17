@@ -38,16 +38,6 @@ export class HeroComponent {
   }
 
   downloadCV() {
-    fetch('http://localhost:3000/download-cv')
-      .then(res => res.blob())
-      .then(blob => {
-        const url = window.URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = 'Advocate_CV.pdf';
-        link.click();
-        window.URL.revokeObjectURL(url);
-      })
-      .catch(err => console.error('Error downloading CV:', err));
+    window.open('http://localhost:3000/download-cv', '_blank');
   }
 }

@@ -9,8 +9,7 @@
         <div class="hero-buttons">
             <button pButton type="button" label="Book Consultation" icon="pi pi-calendar"
                 (click)="showDialog()"></button>
-            <button pButton type="button" label="Download CV" icon="pi pi-download" class="p-button-outlined"
-                (click)="downloadCV()"></button>
+            <button pButton type="button" label="Download CV" icon="pi pi-download" class="p-button-outlined"></button>
         </div>
     </div>
 
@@ -27,14 +26,18 @@
             </div>
             <div class="p-field">
                 <label>Email</label>
-                <input pInputText type="email" [(ngModel)]="appointment.email" name="email" required />
+                <input pInputText type="email" [(ngModel)]="appointment.email" name="email" required placeholder="Enter your correct email to receive reply." />
             </div>
             <div class="p-field">
                 <label>Phone</label>
                 <input pInputText [(ngModel)]="appointment.phone" name="phone" required />
             </div>
             <div class="p-field">
-                <label>Reason</label>
+                <label>Address</label>
+                <input pInputText [(ngModel)]="appointment.address" name="phone" required />
+            </div>
+            <div class="p-field">
+                <label>Reason To Connect</label>
                 <textarea pInputTextarea rows="3" [(ngModel)]="appointment.reason" name="reason"></textarea>
             </div>
         </div>

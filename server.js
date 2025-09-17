@@ -11,23 +11,22 @@ app.use(express.json());
 // 📂 DOWNLOAD CV ENDPOINT
 // =========================
 app.get('/download-cv', (req, res) => {
-  const filePath = path.join(__dirname, 'Advocate_CV.pdf'); // CV must be in project root
-  res.download(filePath, 'Advocate_CV.pdf', (err) => {
+  const filePath = path.join(__dirname, 'assets', 'Advocate_CV.pdf'); // keep PDF inside assets folder
+  res.sendFile(filePath, (err) => {
     if (err) {
-      console.error('❌ Download error:', err);
-      res.status(500).send('Error downloading CV.');
+      console.error('❌ Error serving CV:', err);
+      res.status(500).send('Error opening CV.');
     }
   });
 });
-
 // =========================
 // 📧 MAIL TRANSPORTER (shared)
 // =========================
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'ujjwaltripathi295@gmail.com',   // ⚠️ Advocate’s Gmail
-    pass: '9598'              // ⚠️ Gmail App Password, not login password
+    user: 'satyendramishra500@gmail.com',   // ⚠️ Advocate’s Gmail
+    pass: 'wsed xuwr ywtv ongx'              // ⚠️ Gmail App Password, not login password
   }
 });
 
@@ -40,8 +39,8 @@ app.post('/send-email', async (req, res) => {
   try {
     const mailOptions = {
       from: `"${name}" <${email}>`,
-      to: 'ujjwaltripathi295@gmail.com',
-      subject: `📩 New Contact Form Submission`,
+      to: 'satyendramishra500@gmail.com',
+      subject: `New Contact Form Submission`,
       text: `
         Name: ${name}
         Email: ${email}
@@ -69,7 +68,7 @@ app.post('/book-appointment', async (req, res) => {
   try {
     const mailOptions = {
       from: `"${name}" <${email}>`,
-      to: 'ujjwaltripathi295@gmail.com',
+      to: 'satyendramishra500@gmail.com',
       subject: `📅 New Appointment Request`,
       text: `
         Name: ${name}
