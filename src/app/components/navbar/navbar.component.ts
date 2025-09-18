@@ -8,7 +8,7 @@ import { MenuItem } from 'primeng/api';
   encapsulation:ViewEncapsulation.None
 })
 export class NavbarComponent {
-  menuItems: MenuItem[] = [
+  menuItems: any[] = [
     { label: 'About', command: () => this.scrollTo('about') },
     { label: 'Practice Areas', command: () => this.scrollTo('practice') },
     { label: 'Testimonials', command: () => this.scrollTo('testimonials') },

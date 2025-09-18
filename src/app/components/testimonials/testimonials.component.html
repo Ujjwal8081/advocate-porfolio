@@ -1,55 +1,38 @@
-<div class="container-fluid">
-  <section id="testimonials"  class="p-mb-4">
-    <h2>Client Testimonials</h2>
-      <div class="grid">
-        <div class="col-4  p-md-4">
-          <p-card>
-            <blockquote>
-              "Very professional and supportive throughout my case. Highly recommended!"
-            </blockquote>
-            <p class="client">- Client A</p>
-          </p-card>
+<div class="bg-gray-100" id="testimonials">
+  <div class="container">
+    <div class="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
+      <div class="w-full py-16">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-6">
+            <h2 class="text-4xl font-bold text-gray-800 tracking-tight">What Our Customers Say</h2>
+            <p class="text-lg text-gray-600 mt-2">Hear from our satisfied clients and learn how we've made a difference.
+            </p>
+          </div>
         </div>
-        <div class="col-4  p-md-4">
-          <p-card>
-            <blockquote>
-              "Excellent knowledge of criminal law, handled my case with expertise."
-            </blockquote>
-            <p class="client">- Client B</p>
-          </p-card>
-        </div>
-        <div class="col-4  p-md-4">
-          <p-card>
-            <blockquote>
-              "Quick response and clear advice. Very reliable advocate."
-            </blockquote>
-            <p class="client">- Client C</p>
-          </p-card>
-        </div>
-        <div class="col-4  p-md-4">
-          <p-card>
-            <blockquote>
-              "Quick response and clear advice. Very reliable advocate."
-            </blockquote>
-            <p class="client">- Client C</p>
-          </p-card>
-        </div>
-        <div class="col-4  p-md-4">
-          <p-card>
-            <blockquote>
-              "Quick response and clear advice. Very reliable advocate."
-            </blockquote>
-            <p class="client">- Client C</p>
-          </p-card>
-        </div>
-        <div class="col-4  p-md-4">
-          <p-card>
-            <blockquote>
-              "Quick response and clear advice. Very reliable advocate."
-            </blockquote>
-            <p class="client">- Client C</p>
-          </p-card>
+        <div class="container">
+          <owl-carousel-o [options]="customOptions">
+            <ng-template carouselSlide *ngFor="let item of testimonials; let i = index">
+              <div class="bg-white border border-gray-300 rounded-xl overflow-hidden transition-transform duration-300">
+                <div class="p-4">
+                  <div class="flex items-center mb-2">
+                    <img alt="Sophia Carter's profile photo" class="w-16 h-16 rounded-full object-cover mr-2"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw8aAwvUNjvdLuj5QfL6bA45xsnPWuUovO-pale_TqYndjToNOTWYlnkj71VaycWOmlomN52cwgN3ZPWLdKjCgBmpkr--Y0Jc3nHzSbOGxFSSiNYhVdyLhx2dxgPb3kwVjDcj2WQLTW6VJN0dMUcg7PXWoSfGlz4pueiwF-_g7hpvLxPsj74GafueRQr2u8GiVU0oe5xmqwD5G6ikvOXQXaDoijZ6FR48yTJnv0ZChku9eU3g8LG6d3o5iT2qpUjH08VYVKjwG3smG">
+                    <div>
+                      <p class="text-xl font-semibold text-gray-900">{{ item.name}}</p>
+                      <p class="text-gray-500 text-xs">{{item.post}}</p>
+                    </div>
+                  </div>
+                  <div class="relative">
+                    <p class="text-gray-700 text-sm leading-relaxed italic z-10 relative">
+                      {{item.message}}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </owl-carousel-o>
         </div>
       </div>
-  </section>
+    </div>
+  </div>
 </div>

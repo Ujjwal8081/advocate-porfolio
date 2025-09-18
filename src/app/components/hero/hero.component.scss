@@ -6,7 +6,6 @@
     background: linear-gradient(to right, #1e3a8a, #3b4cca);
     color: white;
     padding: 3rem;
-    border-radius: 10px;
     flex-wrap: wrap;
   }
   
@@ -24,6 +23,7 @@
   }
   
   .hero-buttons button {
+   margin-bottom: 2rem;
     margin-right: 1rem;
   }
   
@@ -39,5 +39,15 @@
     height: auto;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   }
-  
+  .p-field{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    label{
+      width: 30%;
+    }
+    input, textarea{
+      width: 70%;
+    }
+  }
   

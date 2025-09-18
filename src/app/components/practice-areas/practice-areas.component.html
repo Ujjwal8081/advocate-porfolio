@@ -1,28 +1,34 @@
-
-<div class="container-fluid">
-<section id="practice" class="p-mb-4">
-    <h2>Practice Areas</h2>
-    <div class="grid">
-      <div class="col-4 p-md-4">
-        <p-card header="Criminal Law">Sessions, appeals, bail matters.</p-card>
-      </div>
-      <div class="col-4 p-md-4">
-        <p-card header="Civil Litigation">Property, family law, contracts.</p-card>
-      </div>
-      <div class="col-4 p-md-4">
-        <p-card header="Constitutional Law">Writs, service matters, PILs.</p-card>
-      </div>
-      <div class="col-4 p-md-4">
-        <p-card header="Constitutional Law">Writs, service matters, PILs.</p-card>
-      </div>
-      <div class="col-4 p-md-4">
-        <p-card header="Constitutional Law">Writs, service matters, PILs.</p-card>
-      </div>
-      <div class="col-4 p-md-4">
-        <p-card header="Constitutional Law">Writs, service matters, PILs.</p-card>
+<div class="bg-white" id="practice">
+  <div class="container">
+  <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+    <div class="layout-container flex h-full grow flex-col">
+      <div class="px-4 py-12 lg:py-12 flex flex-1 justify-center">
+        <div class="layout-content-container flex flex-col max-w-7xl flex-1">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Our Practice Areas</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">We offer a wide range of legal services to meet the
+              diverse needs of our clients. Explore our practice areas to learn more about how we can help you.</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div *ngFor="let area of practiceAreas"
+              class="flex flex-col bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:transform hover:-translate-y-2 hover:shadow-lg">
+              <div class="w-full h-48 bg-center bg-no-repeat bg-cover"
+                  [ngStyle]="{'background-image': 'url(assets/images/' + area.image + ')'}">
+              </div>
+              <div class="p-6 flex flex-col flex-grow"> 
+                <h3 class="text-xl font-bold text-gray-900 mb-2">{{area.name}}</h3>
+                <p class="text-gray-600 text-base mb-4 flex-grow">{{area.description}}</p>
+                <a class="text-[var(--primary-color)] font-semibold inline-flex items-center group" href="#">
+                  Learn More
+                  <span
+                    class="material-symbols-outlined ml-1 transition-transform duration-300 group-hover:translate-x-1">&#8594;</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+  </div>
 </div>
-  <p-divider></p-divider>
-  

@@ -1,27 +1,42 @@
-<div class="container-fluid">
-<section id="contact" class="p-mb-4">
-    <h2>Contact</h2>
-    <form (ngSubmit)="sendMessage()">
-      <div class="p-fluid p-formgrid p-grid">
-        <div class="p-field p-col-12 p-md-6">
-          <label>Name</label>
-          <input pInputText [(ngModel)]="contact.name" name="name" required />
-        </div>
-        <div class="p-field p-col-12 p-md-6">
-          <label>Email</label>
-          <input pInputText type="email" [(ngModel)]="contact.email" name="email" required placeholder="Enter your corret email to receive reply" />
-        </div>
-        <div class="p-field p-col-12 p-md-6">
-          <label>Phone</label>
-          <input pInputText [(ngModel)]="contact.phone" name="phone" />
-        </div>
-        <div class="p-field p-col-12">
-          <label>Message</label>
-          <textarea pInputTextarea rows="5" [(ngModel)]="contact.message" name="message" required></textarea>
+<div class="bg-white" id="contact">
+  <div class="container">
+    <div class="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
+      <div class="w-full py-16">
+        <div class="container mx-auto px-4">
+          <form class="space-y-3" (ngSubmit)="sendMessage()">
+            <div>
+              <label for="name" class="label-control">Name</label>
+              <input type="text" id="name" name="name" [(ngModel)]="contact.name" name="name" required
+                class="input-box w-full" />
+            </div>
+
+            <div>
+              <label for="email" class="label-control">Email</label>
+              <input type="email" id="email" name="email" [(ngModel)]="contact.email" required
+                placeholder="Enter your correct email to receive reply" class="input-box w-full" />
+            </div>
+
+            <div>
+              <label for="phone" class="label-control">Phone</label>
+              <input type="tel" id="phone" [(ngModel)]="contact.phone" name="phone" class="input-box w-full" />
+            </div>
+            <div>
+              <label for="message" class="label-control">Message</label>
+              <textarea id="message" [(ngModel)]="contact.message" name="message" required rows="3"
+                class="text-area w-full"></textarea>
+            </div>
+
+
+            <div class="pt-2">
+              <button type="submit"
+                class="px-6 py-3 bg-blue-500 text-white font-medium rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-200">
+                Send Message
+              </button>
+            </div>
+          </form>
         </div>
       </div>
-      <button pButton type="submit" label="Send Message" icon="pi pi-send"></button>
-    </form>
-  </section>
+    </div>
+  </div>
 </div>
-  
+
