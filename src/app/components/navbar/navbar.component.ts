@@ -15,12 +15,16 @@ export class NavbarComponent {
     { label: 'Contact', command: () => this.scrollTo('contact') }
   ];
   
-  scrollTo(sectionId: string) {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+scrollTo(sectionId: string) {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    const yOffset = -80; 
+    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({ top: y, behavior: 'smooth' });
   }
+}
+
   goToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' }); // 👈 Smooth scroll to top
   }

@@ -1,80 +1,102 @@
-<!-- 
-
-<section class="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply">
-    <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
-        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">We invest in the world's potential</h1>
-        <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
-        <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
-            <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"  (click)="showDialog()">
-                Get started
-                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                </svg>
-            </a>
-            <a href="#" class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
-                Learn more
-            </a>  
-        </div>
-    </div>
-</section> -->
-
-
-
-
-<!-- 
-<div class="container-fluid px-0">
-    <div class="hero">
-    <div class="container">  
-     <div class="grid">   
-          <div class="col-12 md:col-8 lg:col-9">
-    <div class="hero-text">
-        <h2>Adv. Satyendra Nath Mishra</h2>
-        <p>
-            Specialist in Criminal Defence, Civil Litigation, Constitutional Law.
-            Over 10 years of courtroom experience in Lucknow.
-        </p>
-        <div class="hero-buttons">
-            <button pButton type="button" label="Book Consultation" icon="pi pi-calendar"
-                (click)="showDialog()"></button>
-            <button pButton type="button" label="Download CV" icon="pi pi-download" class="p-button-outlined"></button>
-        </div>
-    </div>
+<div class="bg-gray-100">
+  <div class="container max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
+    <section class="py-24 relative">
+      <div class="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
+        <div class="w-full justify-start items-center gap-8 grid lg:grid-cols-2 grid-cols-1">
+          <div class="w-full flex-col justify-start lg:items-start items-center gap-10 inline-flex">
+            <div class="w-full flex-col justify-start lg:items-start items-center gap-4 flex">
+              <h2 class="text-gray-900 text-4xl font-bold font-manrope leading-normal lg:text-start text-center">
+                Building Stronger Communities through Collaboration and Empowerment</h2>
+              <p class="text-gray-500 text-base font-normal leading-relaxed lg:text-start text-center">Through
+                collaborationperse perspectives and strengths are leveraged to create inclusive environments where
+                everyone has the opportunity to thrive. This approach not only fosters personal growth and achievement
+                but also strengthens the fabric of society.</p>
+            </div>
+            <button
+              class="sm:w-fit w-full px-3.5 py-2 bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex">
+              <span class="px-1.5 text-white text-sm font-medium leading-6" (click)="showDialog()">Get Started</span>
+            </button>
           </div>
-<div class="col-12 md:col-4 lg:col-3">
-    <img src="assets/images/image.png" alt="Advocate photo" width="250" />
-</div>
+          <img class="lg:mx-0 mx-auto h-full rounded-3xl object-cover"
+            src="assets/images/about-me.jpg" alt="about Us image" />
+        </div>
+      </div>
+    </section>
+  </div>
 </div>
 
-</div>
-</div>
-</div> -->
+
 
 
 <p-dialog header="Book Appointment" [style]="{width: '500px'}" [(visible)]="appointmentDialog" [modal]="true">
     <form (ngSubmit)="bookAppointment()">
-        <div class="p-fluid">
-            <div class="p-field">
-                <label>Name</label>
-                <input pInputText [(ngModel)]="appointment.name" name="name" required />
-            </div>
-            <div class="p-field">
-                <label>Email</label>
-                <input pInputText type="email" [(ngModel)]="appointment.email" name="email" required placeholder="Enter your correct email to receive reply." />
-            </div>
-            <div class="p-field">
-                <label>Phone</label>
-                <input pInputText [(ngModel)]="appointment.phone" name="phone" required />
-            </div>
-            <div class="p-field">
-                <label>Address</label>
-                <input pInputText [(ngModel)]="appointment.address" name="phone" required />
-            </div>
-            <div class="p-field">
-                <label>Reason To Connect</label>
-                <textarea pInputTextarea rows="3" [(ngModel)]="appointment.reason" name="reason"></textarea>
-            </div>
-        </div>
-        <button pButton type="submit" label="Book" icon="pi pi-check" style="margin-left: 30%;"></button>
+
+      <div class="">
+    <div class="flex flex-col">
+        <label class="label-control">Name</label>
+        <input 
+            type="text" 
+            [(ngModel)]="appointment.name" 
+            name="name" 
+            required 
+            class="input-box"
+        />
+    </div>
+    
+    <div class="flex flex-col">
+        <label class="label-control">Email</label>
+        <input 
+            type="email" 
+            [(ngModel)]="appointment.email" 
+            name="email" 
+            required 
+            placeholder="Enter your correct email to receive reply." 
+            class="input-box"
+        />
+    </div>
+    
+    <div class="flex flex-col">
+        <label class="label-control">Phone</label>
+        <input 
+            type="text" 
+            [(ngModel)]="appointment.phone" 
+            name="phone" 
+            required 
+            class="input-box"
+        />
+    </div>
+    
+    <div class="flex flex-col">
+        <label class="label-control">Address</label>
+        <input 
+            type="text" 
+            [(ngModel)]="appointment.address" 
+            name="address" 
+            required 
+            class="input-box"
+        />
+    </div>
+    
+    <div class="flex flex-col">
+        <label class="label-control">Reason To Connect</label>
+        <textarea 
+            rows="3" 
+            [(ngModel)]="appointment.reason" 
+            name="reason"
+            class="text-area"
+        ></textarea>
+    </div>
+</div>
+
+<button 
+    type="submit" 
+    class="mt-6 ml-auto block px-6 py-2 bg-blue-600 text-white font-medium rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-200"
+>
+    <svg class="inline-block w-4 h-4 mr-2 -mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+    </svg>
+    Book
+</button>
     </form>
 </p-dialog>
 
