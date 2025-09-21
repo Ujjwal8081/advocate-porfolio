@@ -6,19 +6,23 @@
           <div class="w-full flex-col justify-start lg:items-start items-center gap-10 inline-flex">
             <div class="w-full flex-col justify-start lg:items-start items-center gap-4 flex">
               <h2 class="text-gray-900 text-4xl font-bold font-manrope leading-normal lg:text-start text-center">
-                Building Stronger Communities through Collaboration and Empowerment</h2>
-              <p class="text-gray-500 text-base font-normal leading-relaxed lg:text-start text-center">Through
-                collaborationperse perspectives and strengths are leveraged to create inclusive environments where
-                everyone has the opportunity to thrive. This approach not only fosters personal growth and achievement
-                but also strengthens the fabric of society.</p>
+                Advocating for Justice through Integrity and Dedication
+              </h2>
+              <p class="text-gray-500 text-base font-normal leading-relaxed lg:text-start text-center">
+                Committed to upholding the principles of justice, fairness, and equality, I provide legal guidance and
+                representation with a client-focused approach. By combining in-depth legal knowledge with strategic
+                advocacy, I strive to protect rights, resolve disputes, and ensure that every client’s voice is heard in
+                the pursuit of justice.
+              </p>
             </div>
             <button
               class="sm:w-fit w-full px-3.5 py-2 bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex">
-              <span class="px-1.5 text-white text-sm font-medium leading-6" (click)="showDialog()">Book Appointment</span>
+              <span class="px-1.5 text-white text-sm font-medium leading-6" (click)="showDialog()">Book
+                Appointment</span>
             </button>
           </div>
-          <img class="lg:mx-0 mx-auto h-full rounded-3xl object-cover"
-            src="/assets/images/about-me.jpg" alt="about Us image" />
+          <img class="lg:mx-0 mx-auto h-full rounded-3xl object-cover" src="/assets/images/about-me.jpg"
+            alt="about Us image" />
         </div>
       </div>
     </section>
@@ -29,74 +33,44 @@
 
 
 <p-dialog header="Book Appointment" [style]="{width: '500px'}" [(visible)]="appointmentDialog" [modal]="true">
-    <form (ngSubmit)="bookAppointment()">
+  <form (ngSubmit)="bookAppointment()">
 
-      <div class="">
-    <div class="flex flex-col">
+    <div class="">
+      <div class="flex flex-col">
         <label class="label-control">Name</label>
-        <input 
-            type="text" 
-            [(ngModel)]="appointment.name" 
-            name="name" 
-            required 
-            class="input-box"
-        />
-    </div>
-    
-    <div class="flex flex-col">
+        <input type="text" [(ngModel)]="appointment.name" name="name" required class="input-box" />
+      </div>
+
+      <div class="flex flex-col">
         <label class="label-control">Email</label>
-        <input 
-            type="email" 
-            [(ngModel)]="appointment.email" 
-            name="email" 
-            required 
-            placeholder="Enter your correct email to receive reply." 
-            class="input-box"
-        />
-    </div>
-    
-    <div class="flex flex-col">
+        <input type="email" [(ngModel)]="appointment.email" name="email" required
+          placeholder="Enter your correct email to receive reply." class="input-box" />
+      </div>
+
+      <div class="flex flex-col">
         <label class="label-control">Phone</label>
-        <input 
-            type="text" 
-            [(ngModel)]="appointment.phone" 
-            name="phone" 
-            required 
-            class="input-box"
-        />
-    </div>
-    
-    <div class="flex flex-col">
+        <input type="text" [(ngModel)]="appointment.phone" name="phone" required class="input-box" />
+      </div>
+
+      <div class="flex flex-col">
         <label class="label-control">Address</label>
-        <input 
-            type="text" 
-            [(ngModel)]="appointment.address" 
-            name="address" 
-            required 
-            class="input-box"
-        />
-    </div>
-    
-    <div class="flex flex-col">
+        <input type="text" [(ngModel)]="appointment.address" name="address" required class="input-box" />
+      </div>
+
+      <div class="flex flex-col">
         <label class="label-control">Reason To Connect</label>
-        <textarea 
-            rows="3" 
-            [(ngModel)]="appointment.reason" 
-            name="reason"
-            class="text-area"
-        ></textarea>
+        <textarea rows="3" [(ngModel)]="appointment.reason" name="reason" class="text-area"></textarea>
+      </div>
     </div>
-</div>
 
-<button 
-    type="submit" 
-    class="mt-6 ml-auto block px-6 py-2 bg-blue-600 text-white font-medium rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-200"
->
-    <svg class="inline-block w-4 h-4 mr-2 -mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-    </svg>
-    Book
-</button>
-    </form>
+    <button type="submit"
+      class="mt-6 ml-auto block px-6 py-2 bg-blue-600 text-white font-medium rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-200">
+      <svg class="inline-block w-4 h-4 mr-2 -mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd"
+          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+          clip-rule="evenodd"></path>
+      </svg>
+      Book
+    </button>
+  </form>
 </p-dialog>
-
