@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { MessageService } from 'primeng/api';
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: 'app-hero',
@@ -17,23 +19,28 @@ export class HeroComponent {
     reason: ''
   };
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,
+    private messageService: MessageService 
+  ) {}
 
   showDialog() {
     this.appointmentDialog = true;
   }
 
   bookAppointment() {
-    this.http.post('http://localhost:3000/book-appointment', this.appointment, { responseType: 'text' })
-      .subscribe({
-        next: () => {
-          alert('Appointment request sent successfully!');
-          this.appointmentDialog = false;
-          this.appointment = { name: '', address: '', phone: '', email: '', reason: '' };
-        },
-        error: () => {
-          alert('Failed to send appointment. Please try again later.');
-        }
+
+     const serviceID = 'service_Service';
+    const templateID = 'template_m01i9hg';
+    const publicKey = '19-29-1sq6ZSxosG6';
+
+       emailjs.send(serviceID, templateID, this.appointment, publicKey)
+      .then(res => {
+       this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Appointment Request Sent Successfully!.' });
+        this.appointmentDialog = false;
+        this.appointment = { name: '', email: '', phone: '', address: '', reason: '' };
+      }, err => {
+          console.error('Send error', err);
+        this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Failed to send message. Please try again later.' });
       });
   }
 
